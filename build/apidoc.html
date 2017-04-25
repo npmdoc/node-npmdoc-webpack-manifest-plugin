@@ -61,12 +61,321 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.webpack-manifest-plugin">module webpack-manifest-plugin</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-manifest-plugin.webpack-manifest-plugin">
+            function <span class="apidocSignatureSpan"></span>webpack-manifest-plugin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-manifest-plugin.plugin">
+            function <span class="apidocSignatureSpan">webpack-manifest-plugin.</span>plugin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webpack-manifest-plugin.</span>plugin.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-manifest-plugin.plugin">module webpack-manifest-plugin.plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-manifest-plugin.plugin.plugin">
+            function <span class="apidocSignatureSpan">webpack-manifest-plugin.</span>plugin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-manifest-plugin.plugin.prototype">module webpack-manifest-plugin.plugin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-manifest-plugin.plugin.prototype.apply">
+            function <span class="apidocSignatureSpan">webpack-manifest-plugin.plugin.prototype.</span>apply
+            <span class="apidocSignatureSpan">(compiler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-manifest-plugin.plugin.prototype.getFileType">
+            function <span class="apidocSignatureSpan">webpack-manifest-plugin.plugin.prototype.</span>getFileType
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.webpack-manifest-plugin" id="apidoc.module.webpack-manifest-plugin">module webpack-manifest-plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-manifest-plugin.webpack-manifest-plugin" id="apidoc.element.webpack-manifest-plugin.webpack-manifest-plugin">
+        function <span class="apidocSignatureSpan"></span>webpack-manifest-plugin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ManifestPlugin(opts) {
+  this.opts = _.assign({
+    basePath: &#x27;&#x27;,
+    publicPath: &#x27;&#x27;,
+    fileName: &#x27;manifest.json&#x27;,
+    stripSrc: null,
+    transformExtensions: /^(gz|map)$/i,
+    writeToFileEmit: false,
+    cache: null
+  }, opts || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-manifest-plugin.plugin" id="apidoc.element.webpack-manifest-plugin.plugin">
+        function <span class="apidocSignatureSpan">webpack-manifest-plugin.</span>plugin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ManifestPlugin(opts) {
+  this.opts = _.assign({
+    basePath: &#x27;&#x27;,
+    publicPath: &#x27;&#x27;,
+    fileName: &#x27;manifest.json&#x27;,
+    stripSrc: null,
+    transformExtensions: /^(gz|map)$/i,
+    writeToFileEmit: false,
+    cache: null
+  }, opts || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ManifestPlugin.prototype.apply = function(compiler) {
+var outputName = this.opts.fileName;
+var cache = this.opts.cache || {};
+var moduleAssets = {};
+
+compiler.<span class="apidocCodeKeywordSpan">plugin</span>(&#x22;compilation&#x22;, function (compilation) {
+  compilation.plugin(&#x27;module-asset&#x27;, function (module, file) {
+    moduleAssets[file] = path.join(
+        path.dirname(file),
+        path.basename(module.userRequest)
+    );
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webpack-manifest-plugin.plugin" id="apidoc.module.webpack-manifest-plugin.plugin">module webpack-manifest-plugin.plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-manifest-plugin.plugin.plugin" id="apidoc.element.webpack-manifest-plugin.plugin.plugin">
+        function <span class="apidocSignatureSpan">webpack-manifest-plugin.</span>plugin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ManifestPlugin(opts) {
+  this.opts = _.assign({
+    basePath: &#x27;&#x27;,
+    publicPath: &#x27;&#x27;,
+    fileName: &#x27;manifest.json&#x27;,
+    stripSrc: null,
+    transformExtensions: /^(gz|map)$/i,
+    writeToFileEmit: false,
+    cache: null
+  }, opts || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ManifestPlugin.prototype.apply = function(compiler) {
+var outputName = this.opts.fileName;
+var cache = this.opts.cache || {};
+var moduleAssets = {};
+
+compiler.<span class="apidocCodeKeywordSpan">plugin</span>(&#x22;compilation&#x22;, function (compilation) {
+  compilation.plugin(&#x27;module-asset&#x27;, function (module, file) {
+    moduleAssets[file] = path.join(
+        path.dirname(file),
+        path.basename(module.userRequest)
+    );
+  });
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webpack-manifest-plugin.plugin.prototype" id="apidoc.module.webpack-manifest-plugin.plugin.prototype">module webpack-manifest-plugin.plugin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-manifest-plugin.plugin.prototype.apply" id="apidoc.element.webpack-manifest-plugin.plugin.prototype.apply">
+        function <span class="apidocSignatureSpan">webpack-manifest-plugin.plugin.prototype.</span>apply
+        <span class="apidocSignatureSpan">(compiler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (compiler) {
+  var outputName = this.opts.fileName;
+  var cache = this.opts.cache || {};
+  var moduleAssets = {};
+
+  compiler.plugin(&#x22;compilation&#x22;, function (compilation) {
+    compilation.plugin(&#x27;module-asset&#x27;, function (module, file) {
+      moduleAssets[file] = path.join(
+          path.dirname(file),
+          path.basename(module.userRequest)
+      );
+    });
+  });
+
+  compiler.plugin(&#x27;emit&#x27;, function(compilation, compileCallback) {
+    var stats = compilation.getStats().toJson();
+    var manifest = {};
+
+    _.merge(manifest, compilation.chunks.reduce(function(memo, chunk) {
+      var chunkName = chunk.name ? chunk.name.replace(this.opts.stripSrc, &#x27;&#x27;) : null;
+
+      // Map original chunk name to output files.
+      // For nameless chunks, just map the files directly.
+      return chunk.files.reduce(function(memo, file) {
+        // Don&#x27;t add hot updates to manifest
+        if (file.indexOf(&#x27;hot-update&#x27;) &#x3e;= 0) {
+          return memo;
+        }
+        if (chunkName) {
+          memo[chunkName + &#x27;.&#x27; + this.getFileType(file)] = file;
+        } else {
+          memo[file] = file;
+        }
+        return memo;
+      }.bind(this), memo);
+    }.bind(this), {}));
+
+    // module assets don&#x27;t show up in assetsByChunkName.
+    // we&#x27;re getting them this way;
+    _.merge(manifest, stats.assets.reduce(function(memo, asset) {
+      var name = moduleAssets[asset.name];
+      if (name) {
+        memo[name] = asset.name;
+      }
+      return memo;
+    }, {}));
+
+    // Append optional basepath onto all references.
+    // This allows output path to be reflected in the manifest.
+    if (this.opts.basePath) {
+      manifest = _.reduce(manifest, function(memo, value, key) {
+        memo[this.opts.basePath + key] = this.opts.basePath + value;
+        return memo;
+      }.bind(this), {});
+    } else if (this.opts.publicPath) {
+      // Similar to basePath but only affects the value (similar to how
+      // output.publicPath turns require(&#x27;foo/bar&#x27;) into &#x27;/public/foo/bar&#x27;, see
+      // https://github.com/webpack/docs/wiki/configuration#outputpublicpath
+      manifest = _.reduce(manifest, function(memo, value, key) {
+        memo[key] = this.opts.publicPath + value;
+        return memo;
+      }.bind(this), {});
+    }
+
+    Object.keys(manifest).sort().forEach(function(key) {
+      cache[key] = manifest[key];
+    });
+
+    var json = JSON.stringify(cache, null, 2);
+
+    compilation.assets[outputName] = {
+      source: function() {
+        return json;
+      },
+      size: function() {
+        return json.length;
+      }
+    };
+
+    if (this.opts.writeToFileEmit) {
+      var outputFolder = compilation.options.output.path;
+      var outputFile = path.join(outputFolder, this.opts.fileName);
+
+      fse.outputFileSync(outputFile, json);
+    }
+
+    compileCallback();
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-manifest-plugin.plugin.prototype.getFileType" id="apidoc.element.webpack-manifest-plugin.plugin.prototype.getFileType">
+        function <span class="apidocSignatureSpan">webpack-manifest-plugin.plugin.prototype.</span>getFileType
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFileType = function (str) {
+  str = str.replace(/\?.*/, &#x27;&#x27;);
+  var split = str.split(&#x27;.&#x27;);
+  var ext = split.pop();
+  if (this.opts.transformExtensions.test(ext)) {
+    ext = split.pop() + &#x27;.&#x27; + ext;
+  }
+  return ext;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // For nameless chunks, just map the files directly.
+  return chunk.files.reduce(function(memo, file) {
+    // Don&#x27;t add hot updates to manifest
+    if (file.indexOf(&#x27;hot-update&#x27;) &#x3e;= 0) {
+      return memo;
+    }
+    if (chunkName) {
+      memo[chunkName + &#x27;.&#x27; + this.<span class="apidocCodeKeywordSpan">getFileType</span>(file)] = file;
+    } else {
+      memo[file] = file;
+    }
+    return memo;
+  }.bind(this), memo);
+}.bind(this), {}));
+...</pre></li>
+    </ul>
+
 
 </div>
 
