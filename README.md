@@ -1,9 +1,14 @@
-# api documentation for  [webpack-manifest-plugin (v1.1.0)](https://github.com/danethurber/webpack-manifest-plugin)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-manifest-plugin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-manifest-plugin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-manifest-plugin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-manifest-plugin)
+# npmdoc-webpack-manifest-plugin
+
+#### basic api documentation for  [webpack-manifest-plugin (v1.1.0)](https://github.com/danethurber/webpack-manifest-plugin)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-manifest-plugin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-manifest-plugin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-manifest-plugin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-manifest-plugin)
+
 #### webpack plugin for generating asset manifests
 
-[![NPM](https://nodei.co/npm/webpack-manifest-plugin.png?downloads=true)](https://www.npmjs.com/package/webpack-manifest-plugin)
+[![NPM](https://nodei.co/npm/webpack-manifest-plugin.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/webpack-manifest-plugin)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-webpack-manifest-plugin_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-webpack-manifest-plugin/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Dane Thurber",
-        "email": "dane.thurber@gmail.com"
+        "name": "Dane Thurber"
     },
     "bugs": {
         "url": "https://github.com/danethurber/webpack-manifest-plugin/issues"
@@ -47,13 +51,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "danethurber",
-            "email": "dane.thurber@gmail.com"
+            "name": "danethurber"
         }
     ],
     "name": "webpack-manifest-plugin",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/danethurber/webpack-manifest-plugin.git"
@@ -61,19 +63,10 @@
     "scripts": {
         "test": "jasmine"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module webpack-manifest-plugin](#apidoc.module.webpack-manifest-plugin)
-
-
-
-# <a name="apidoc.module.webpack-manifest-plugin"></a>[module webpack-manifest-plugin](#apidoc.module.webpack-manifest-plugin)
 
 
 
